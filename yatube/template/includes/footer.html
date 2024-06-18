@@ -1,0 +1,22 @@
+{% load static %}
+<style>
+    .image-wrapper {
+    display: flex;
+  }
+  </style>
+<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div class="me-5 d-none d-lg-block">
+      <span>Всегда на связи:</span>
+    </div>
+    <div class="image-wrapper">
+      <a href="https://t.me/RocmanB" class="me-4 text-reset">
+        <img src="{% static 'img/telegram.png' %}" width="30" height="30" alt="">
+      </a>
+      <a href="https://github.com/RoCmanB" class="me-4 text-reset">
+        <img src="{% static 'img/github.png' %}" width="30" height="30" alt="">
+      </a>
+    </div>
+</section>
+<section class="text-center p-4">
+  © {{ year }} <span style="color:red">Технологии</span> Оптимального проектирования
+</section>

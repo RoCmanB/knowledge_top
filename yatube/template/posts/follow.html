@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% load cache %}
+{% block title %} 
+  Подписки пользователя {{ user }}
+{% endblock %}
+{% block content %}
+  <div class="container py-5"> 
+    <h1>Ваши подписки</h1>
+    <article>
+    {% include 'posts/includes/switcher.html' with follow=True%}
+    {% if page_obj %}
+      {% for post in page_obj %}
+      {% include 'posts/includes/posts_list.html' with show_posts_list=True %}
+      {% if not forloop.last %}<hr>{% endif %}
+      {% endfor %}
+      {% include 'posts/includes/paginator.html' %}
+      {% else %}
+      <div class='text-center'> 
+        Вы ни на кого не подписаны
+      </div>
+    {% endif %}
+    </article>
+  </div>
+{% endblock %}

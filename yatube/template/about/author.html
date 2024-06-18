@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+<!-- title == 'Об авторе проекта' :)-->
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<div class="container py-5"> 
+  <h2>Всем привет, меня зовут Роман &#x1F44B;</h2>
+  <div class="p-4 p-md-5 mb-5 text-white rounded bg-dark">
+    <div class="col-md-10 px-0">
+      <h1 class="display-4 fst-italic">{{ text }}</h1>
+    <p class="lead my-0">
+      Самое сложное сделать первый шаг. Я готовился к этому шагу несколько лет и вот
+      наконец я здесь, чему я безусловно рад. Надеюсь, что знания полученные в этом курсе
+      пригодятся в будущем!
+    </p>
+    <p class="lead my-0">
+      Дорогу осилит идущий, удачи всем вам.
+    </p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Технологии{% endblock %}
+{% block content %}
+{% load static %}
+<div class="container py-5"> 
+<div class="card border-0" style="background: white;">
+  <h4>Проект реализован с помощью следующих технологий:</h4>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        Python
+      </li>
+      <li class="list-group-item">
+        Django
+      </li>
+      <li class="list-group-item">
+        Bootstrap
+      </li>
+    </ul>
+  <h4>Краткое описание функционала:</h4>  
+    <article class="col-12 col-md-9">
+      <p>Сервис позволяет пользователям создавать статьи, а также комментировать чужие статьи и подписываться на авторов.</p>
+    </article>
+</div>
+</div>
+{% endblock %}

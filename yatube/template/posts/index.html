@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% load cache %}
+{% block title %} 
+  Последние статьи на сайте
+{% endblock %}
+{% block content %}
+  <div class="container py-5">     
+    <h1>Последние статьи на сайте</h1>
+    <article>
+    {% include 'posts/includes/switcher.html' with index=True %}
+    {% cache 20 index_cache page_obj %}
+    {% for post in page_obj %}
+    {% include 'posts/includes/posts_list.html' with show_posts_list=True %}
+      {% if not forloop.last %}<hr>{% endif %}
+      {% endfor %}
+      {% endcache %}
+      {% include 'posts/includes/paginator.html' %}
+    </article>
+  </div>
+{% endblock %}

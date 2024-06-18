@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Custom 500{% endblock %}
+{% block content %}
+<body>
+  <div class="d-flex align-items-center justify-content-center vh-100">
+    <div class="text-center">
+      <h1 class="display-1 fw-bold">500</h1>
+        <p class="fs-3">
+          <span class="text-danger">Упс!</span>
+          На сервере возникла непредвиденная ошибка.
+        </p>
+        <a href="{% url 'posts:index' %}" class="btn btn-primary">Вернуться на главную</a>
+    </div>
+  </div>
+</body>
+{% endblock %} 

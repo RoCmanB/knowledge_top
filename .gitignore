@@ -147,6 +147,6 @@ dmypy.json
 
 # Папки со статикой и медиа
 static/
-yatube/posts/static/
-yatube/media/
+kltop/posts/static/
+kltop/media/
 

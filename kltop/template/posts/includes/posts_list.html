@@ -1,7 +1,7 @@
 {% load thumbnail %}
 <article>
   {% thumbnail post.image "960x339" crop="center" upscale=True as im %}
-    <img class="card-img my-3" src="{{ im.url }}">
+    <img class="card-img my-3" src="{{ im.url }}" style="width: 60%; height: auto;">
   {% endthumbnail %}
       <p class="p-2" style="font-size: 24px; font-weight: bold;">
         {{ post.title }}
@@ -14,7 +14,7 @@
   {% if show_posts_list %}
   {% if post.group %}
     <p class="nav nav-pills"> 
-      <a class="nav-link active" href="{% url 'posts:group_list' post.group.slug %}">Все записи группы: {{ post.group.title }}</a>
+      <a class="nav-link active" href="{% url 'posts:group_list' post.group.slug %}" style="background-color: rgba(0, 0, 0, 0.836); color: white;">{{ post.group.title }}</a>
     </p>
   {% else %}
     <p>

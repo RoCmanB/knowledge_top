@@ -21,9 +21,10 @@ class Post(models.Model):
     title = models.CharField(
         max_length=100,
         verbose_name='Название статьи',
-        help_text='Введите текст названия статьи'
-    )
-    text = models.CharField(max_length=50000)
+        help_text='Введите текст названия статьи')
+    text = models.CharField(max_length=50000,
+                            verbose_name='Введите текст статьи',
+                            help_text='Не более 50000 символов')
     pub_date = models.DateTimeField('Date of pub', auto_now_add=True)
     author = models.ForeignKey(User,
                                on_delete=models.CASCADE,

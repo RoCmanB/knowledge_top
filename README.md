@@ -17,7 +17,7 @@
 python -m venv venv
 ```
 
-* Mac OS
+* Mac OS and Linux
 ```bash
 python3 -m venv venv
 ```
@@ -28,7 +28,7 @@ python3 -m venv venv
 source venv/Scripts/activate
 ```
 
-* Mac OS
+* Mac OS and Linux
 ```bash
 source venv/bin/activate
 ```
@@ -38,11 +38,14 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+5. Запуск проекта
+```bash
+cd kltop
+python3 manage.py runsrver
+```
 
 
-## Badges
 
-Add badges from somewhere like: [shields.io](https://shields.io/)
+## License
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-

@@ -71,6 +71,7 @@ class PathsTests(TestCase):
         posts_count = Post.objects.count()
         form_data = {
             'author': self.user.username,
+            'title': 'Оглавление',
             'text': 'Текст из формы',
             'group': self.group.id,
             'image': self.post.image
@@ -82,10 +83,12 @@ class PathsTests(TestCase):
         )
         first_post = Post.objects.first()
         auth_post = first_post.author
+        text_title = first_post.title
         group_post = first_post.group
         text_post = first_post.text
         new_post = {
             auth_post: self.user,
+            text_title: form_data['title'],
             text_post: form_data['text'],
             group_post: self.group,
         }
@@ -100,9 +103,11 @@ class PathsTests(TestCase):
     def test_post_edited(self):
         """Пост отредактирован."""
         original_post = self.post
+        edited_title = 'Article из формы изменен'
         edited_text = 'Текст из формы изменен'
         form_data = {
             'author': self.user.username,
+            'title': edited_title,
             'text': edited_text,
             'group': self.group.id,
         }

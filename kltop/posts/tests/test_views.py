@@ -55,6 +55,7 @@ class PathsTests(TestCase):
         )
         cls.post = Post.objects.create(
             author=cls.user,
+            title = 'Тестовая статья',
             text='Тестовый пост',
             group=cls.group,
             image=cls.image

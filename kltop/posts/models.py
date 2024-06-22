@@ -38,7 +38,7 @@ class Post(models.Model):
                               verbose_name='Выберите группу',
                               help_text='Одну из доступных')
     image = models.ImageField(
-        'Картинка',
+        'Обложка статьи',
         upload_to='posts/',
         blank=True
     )

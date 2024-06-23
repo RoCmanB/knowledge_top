@@ -3,7 +3,7 @@
   <nav class="navbar navbar-light" style="background-color: rgb(74, 165, 226)">
     <div class="container">
       <a class="navbar-brand" href="{% url 'posts:index' %}">
-        <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="{% static 'img/knowledge1.png' %}" width="40" height="40" class="d-inline-block central" alt="">
         <span style="color:rgb(255, 255, 255)">Это База  </span>Знаний
       </a>
       <ul class="nav nav-pills">
@@ -13,7 +13,7 @@
           {% if view_name  == 'about:author' %}
           active
           {% endif %}"
-          href="{% url 'about:author' %}">Об авторе</a>
+          href="{% url 'about:author' %}">Справка</a>
         </li>
         <li class="nav-item">
           <a class="nav-link link-light
@@ -61,13 +61,13 @@
           {% endif %}"
           href="{% url 'users:login' %}">Войти</a>
         </li>
-        <li class="nav-item"> 
+        <!--<li class="nav-item"> 
           <a class="nav-link link-light
           {% if view_name  == 'users:signup' %}
           active
           {% endif %}"
           href="{% url 'users:signup' %}">Регистрация</a>
-        </li>
+        </li>-->
         {% endif %}
       {% endwith %}
       </ul>

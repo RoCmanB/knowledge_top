@@ -7,7 +7,7 @@ class AboutAuthorView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Об авторе проекта'
-        context['text'] = ('Per Aspera Ad Astra')
+        context['text'] = ('Scientia est inaestimabilis')
         return context
 
 
